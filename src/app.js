@@ -8,12 +8,13 @@ import { errorHandler, notFoundHandler } from './middleware/error.middleware.js'
 import routes from './routes/index.js';
 
 export const app = express();
+const allowedOrigins = env.CORS_ORIGIN.split(',').map((origin) => origin.trim());
 
 app.set('trust proxy', 1);
 app.use(helmet());
 app.use(
   cors({
-    origin: true,
+    origin: allowedOrigins,
     credentials: true
   })
 );

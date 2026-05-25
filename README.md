@@ -102,5 +102,6 @@ Required values include:
 - `JWT_ACCESS_SECRET`
 - `JWT_REFRESH_SECRET`
 - `APP_BASE_URL`
+- `CORS_ORIGIN` (comma-separated allowed origins)
 - `EMAIL_FROM`
 - SMTP settings (`SMTP_HOST`, `SMTP_PORT`, optional auth)

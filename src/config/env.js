@@ -12,6 +12,7 @@ const envSchema = z.object({
   ACCESS_TOKEN_EXPIRES_IN: z.string().default('15m'),
   REFRESH_TOKEN_EXPIRES_IN: z.string().default('7d'),
   APP_BASE_URL: z.string().url(),
+  CORS_ORIGIN: z.string().optional().default('http://localhost:3000'),
   EMAIL_FROM: z.string().email(),
   SMTP_HOST: z.string().min(1),
   SMTP_PORT: z.coerce.number().int().positive(),
