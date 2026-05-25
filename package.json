@@ -1,0 +1,46 @@
+{
+  "name": "node20-mysql-auth-api",
+  "version": "1.0.0",
+  "description": "Node.js 20 + Express + Prisma MySQL auth boilerplate with signup verification, login and password reset flows.",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:push": "prisma db push",
+    "prisma:studio": "prisma studio",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swahome/node20-mysql-auth-api.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/swahome/node20-mysql-auth-api/issues"
+  },
+  "homepage": "https://github.com/swahome/node20-mysql-auth-api#readme",
+  "dependencies": {
+    "@prisma/client": "^6.19.3",
+    "bcryptjs": "^3.0.3",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.1.0",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.1",
+    "nodemailer": "^8.0.8",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10",
+    "prisma": "^6.19.3"
+  }
+}
